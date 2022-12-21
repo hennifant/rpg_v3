@@ -18,8 +18,8 @@ func _on_Exit_pressed():
 func _on_Quests_pressed():
 	get_parent().get_node("QuestLog").visible = true
 
-func _on_Inventory_pressed():
-	get_parent().get_node("Inventory").show()
+#func _on_Inventory_pressed():
+#	get_parent().get_node("Inventory").show()
 
 func _on_Options_pressed():
 	get_parent().get_node("Settings").show()
