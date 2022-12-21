@@ -1,0 +1,29 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Textures/Player/Marissa/Blonde/Down2.png" type="Texture" id=1]
+[ext_resource path="res://Textures/Player/Marissa/Blonde/Up2.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Player/Marissa/Blonde/Left2.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Player/Marissa/Blonde/Right2.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/NPC.gd" type="Script" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 13, 16.5 )
+
+[node name="NPC" type="StaticBody2D"]
+script = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 2 )

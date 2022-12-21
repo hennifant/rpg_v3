@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Textures/Enemy/Slimer1.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Slimer.gd" type="Script" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 18, 17.5 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 48.1664
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 19, 18.5 )
+
+[node name="Enemy" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 2 )
+
+[node name="Detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+shape = SubResource( 3 )
+
+[node name="Damage" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Damage"]
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="Detection" to="." method="_on_Detection_body_entered"]
+[connection signal="body_entered" from="Damage" to="." method="_on_Damage_body_entered"]
