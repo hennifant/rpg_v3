@@ -21,7 +21,7 @@ func hurt(dmg):
 		Health -= dmg
 	if Health <= 0:
 		PlayerStats.Stats.CurrentExperience += 20
-#		QM.Quests.Martha.MarthaQuest = true
+		QM.Quests.Marissa.MarissaQuest = true
 		self.queue_free()
 	print(str(Health))
 
@@ -39,7 +39,7 @@ func FollowPlayer():
 func _on_Detection_body_entered(body):
 	# check if body is our player
 	if body.name == "Player":
-	#set follow to true
+	# set follow to true
 		Follow = true
 
 

@@ -20,17 +20,17 @@ func _ready():
 
 
 func _process(delta):
-#	LevelingUp()
+	LevelingUp()
 	Interact()
 	attack()
 	move()
 	move_and_slide(velocity)
 
-#func LevelingUp():
-#	if PlayerStats.levelingup == true:
-#		$AnimationPlayer.play("LevelUp")
-#		yield(get_tree().create_timer(1.2),"timeout")
-#		PlayerStats.levelingup = false
+func LevelingUp():
+	if PlayerStats.levelingup == true:
+		$AnimationPlayer.play("LevelUp")
+		yield(get_tree().create_timer(1.2),"timeout")
+		PlayerStats.levelingup = false
 
 func move():
 	velocity = Vector2()

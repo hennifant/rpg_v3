@@ -4,7 +4,7 @@
 [ext_resource path="res://Util/Resources/GroundAutoTiles.tres" type="TileSet" id=2]
 [ext_resource path="res://Util/Resources/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Util/Resources/NPC.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Util/Resources/GUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Util/Resources/Slimer.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=22]

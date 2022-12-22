@@ -40,6 +40,7 @@ var Stats = {
 #}
 
 var levelingup:bool = false
+
 var SAVE_PATH = "user://Stats.bin"
 var config_file = ConfigFile.new()
 #func _process(delta):
